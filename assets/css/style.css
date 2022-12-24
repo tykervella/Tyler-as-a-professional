@@ -1,0 +1,109 @@
+:root {
+    --dark: #2e5339;
+    --neutral: #9D695A;
+    --neutral-light: #C4AF9A;
+    --light: #729b79;
+}
+
+* {
+    background-color: var(--neutral);
+}
+
+h1,h2,h3,h4,h5,h6,p,a {
+    background-color: transparent;
+}
+
+header {
+    height: 60px;
+    background-color: var(--neutral-light);
+    padding-top: 10px;
+}
+
+h1 {
+    font-size: 48px;
+    font-family: cursive;
+    text-decoration: wavy;
+    text-decoration-color: var(--dark);
+    color: var(--dark);
+    text-align: center;
+    text-shadow: 8px 2px var(--light);
+    font-style: italic;
+}
+
+nav,footer {
+    height: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    background-color: var(--dark);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+nav a {
+    font-size: 24px;
+    font-family:'Courier New', Courier, monospace;
+    color: var(--light);
+    margin-left: 15px;
+    margin-right: 15px;
+
+}
+
+
+
+
+#about-me, #projects, #contact-me {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#about-me, #contact-me {
+    height: 250px;
+}
+
+#projects {
+    height: 400px;
+}
+
+.cards{
+    flex: 1 0 150px;
+    margin: 10px;
+    border-radius: 25px;
+    border: 3.5px solid var(--dark);
+    box-shadow: 2px 5px 5px var(--dark);
+    padding: 10px;
+    background-color: var(--neutral-light);
+    
+}
+
+#float-left {
+    flex: 4 0;
+}
+
+#float-right {s
+    flex: 1 0 250px;
+}
+
+#float-right img {
+    display:block;
+    height:225px;
+    width: 225px;
+    margin: 0 auto;
+}
+
+#featured {
+    flex-grow: 2.5;
+    flex-basis: 400px;
+}
+
+@media screen and (max-width: 768px) {
+    #about-me, #projects {
+      flex-direction: column;
+    }
+
+    .cards {
+        width: 100vw;
+    }
+}
