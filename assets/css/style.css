@@ -46,10 +46,20 @@ h2 {
 
 h3 {
     font-size: 20px;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     text-transform: uppercase;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-style: italic;
+    font-style: bold;
+    text-align: center;
+}
+
+a {
+    font-family: font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--light);
+}
+
+p {
+    text-align: center;
 }
 
 nav {
@@ -91,21 +101,22 @@ nav a {
     padding: 10px;
     background-color: var(--neutral-light);
     position: relative;
-    
 }
 
-.label {
+.info-box {
     height: 60px;
     width: 150px;
     bottom: 20px;
     left: 0px;
     position: absolute;
     background-color: var(--light);
+    padding-top: 10px;
 }
 
 #featured {
     width: 100%;
 }
+
 
 #featured img {
     display: block;
@@ -120,6 +131,7 @@ nav a {
     flex-basis: 45%;
 }
 
+
 #showcase img {
     display: block;
     margin: auto;
@@ -131,7 +143,7 @@ nav a {
     flex: 4 0;
 }
 
-#float-right {s
+#float-right {
     flex: 1 0 250px;
 }
 
@@ -141,6 +153,32 @@ nav a {
     width: 225px;
     margin: 0 auto;
 }
+
+#contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact {
+    width: 250px;
+    border: 5px solid var(--light);
+    border-radius: 10px;
+    background-color: var(--dark);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.contact h3 {
+    color: var(--light);
+    text-decoration: underline;
+
+}
+
+.contact p {
+    color: var(--white);
+}
+
 
 footer {
     height: 25px;
@@ -172,14 +210,18 @@ footer {
     }
 
     #float-right {
-        order: 0;
+        order: 1;
     }
     
     #about-me, #projects, #contact-me {
       flex-direction: column;
       margin: 0 auto;
+      width: 90%;
     }
 
+    .contact {
+        margin: 0 auto; 
+       }
 
     .cards {
         width: 100%;
@@ -189,7 +231,7 @@ footer {
 
     #showcase img {
         height: 150px;
-        width: auto;
+        width: 100%;
     }
 
 }
