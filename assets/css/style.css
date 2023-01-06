@@ -97,7 +97,7 @@ nav a {
     margin: 10px;
     /* border-radius: 25px; */
     border: 6px solid var(--light);
-    /* box-shadow: 8px 5px 3px var(--white); */
+    box-shadow: 8px 5px 10px var(--dark);
     padding: 10px;
     background-color: var(--neutral-light);
     position: relative;
@@ -167,11 +167,12 @@ nav a {
     background-color: var(--dark);
     margin-left: 5px;
     margin-right: 5px;
+    margin-top: 10px;
 }
 
 .contact h3 {
-    color: var(--light);
     text-decoration: underline;
+    color: var(--white);
 
 }
 
@@ -210,6 +211,18 @@ footer {
     }
 
     #float-right {
+        order: 0;
+        flex: 1 0;
+        margin: 10px;
+        /* border-radius: 25px; */
+        /* box-shadow: 8px 5px 3px var(--white); */
+        padding: 10px;
+        position: relative;
+        }
+
+    
+
+    #float-left {
         order: 1;
     }
     
@@ -220,7 +233,7 @@ footer {
     }
 
     .contact {
-        margin: 0 auto; 
+        margin: 7px auto; 
        }
 
     .cards {
