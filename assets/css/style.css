@@ -250,12 +250,12 @@ button p {
 /* Interactive styling for Buttons */
 
 button:focus  {
-    border-color: var(--special);
+    border-color: black;
 }
 
 button:hover {
     background-color: var(--dark);
-    border-color: var(--special);
+    border-color: black;
 }
 
 button:hover h3,
@@ -264,7 +264,7 @@ button:hover p {
 }
 
 button:active {
-    box-shadow: 0 0 10px #48A9A6 inset;
+    box-shadow: 0 0 8px black inset;
 }
 
 
