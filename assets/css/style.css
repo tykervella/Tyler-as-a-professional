@@ -44,8 +44,10 @@ h3 {
 
 a {
     font-family: font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: var(--neutral-light);
+    background-color: transparent;
+    margin_ 0 auto;
 }
+
 
 p {
     text-align: center;
@@ -92,6 +94,21 @@ nav a {
 
 }
 
+
+/* Gave anchors in nav bar interactive styling */
+
+nav a:focus {
+    color: var(--special);
+}
+
+nav a:hover {
+    color: var(--special);
+}
+
+nav a:active {
+    color: var(--dark)
+}
+
 /* Flex Containers for three major parts of main webpage body */
 #about-me, #contact-me, #projects {
     display: flex;
@@ -101,7 +118,6 @@ nav a {
     justify-content: center;
     position: relative;
 }
-
 
 
 /* Styling for any Child flexboxes through the main webpage body */
@@ -115,25 +131,39 @@ nav a {
     padding: 10px;
     background-color: var(--neutral-light);
     position: relative;
+    justify-content: center;
 }
     
 /* Float Left styles the textbox portion of my #about-me */
 /* Child Element */
 #float-left {
     flex: 4 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.text {
+    text-align: left;
+    max-width: 90%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 11px;
 }
     
 /* Float Right Styles the image in the #about-me section */
 /* Child Element */
 #float-right {
-    flex: 1 0 250px;
+    flex: 1 0 200px;
+    display: flex;
+
 }
     
-#float-right img {
-    display:block;
-    height:325px;
+#self {
+    display: relative;
+    height: 325px;
     width: auto;
-    margin: 0 auto;
+    margin: auto;
 }
     
 /* Styling for featured project in #projects section */
