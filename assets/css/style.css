@@ -1,27 +1,17 @@
+/* Defining Color variables that will be used for the entire webpage */
 :root {
-    --dark: #452476;
-    --light: #5244AB;
-    --neutral: #23205f;
-    --neutral-light: #637D9F;
-    --white: #D0E8F2;
+    --dark: #52155C;
+    --light: #6C1467;
+    --neutral: #2E1760;
+    --neutral-light: #7180B9;
+    --white: #F3E0EE;
+    --special: #48A9A6;
 }
+
+/* Setting styles that will be used through document, such as background color and text/header style */
 
 * {
     background-color: var(--neutral);
-}
-
-header {
-    height: 60px;
-    background-color: var(--dark);
-    padding-top: 10px;
-    display:flex;
-    justify-content: flex-end;
-    padding-right: 12.5%;
-
-}
-
-.header {
-    margin: 0 20px;
 }
 
 h1 {
@@ -30,7 +20,6 @@ h1 {
     text-align: center;
     text-shadow: 8px 2px var(--light);
     font-style: bold;
-    text-decoration-color: var(--dark);
     background-color: var(--dark);
     font-size: 40px;
 }
@@ -55,53 +44,142 @@ h3 {
 
 a {
     font-family: font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: var(--light);
+    background-color: var(--neutral-light);
 }
 
 p {
     text-align: center;
 }
 
+/* Styling the very top header bar */
+/* Container */
+header {
+    height: 60px;
+    background-color: var(--dark);
+    padding-top: 10px;
+    display:flex;
+    justify-content: flex-end;
+    padding-right: 12.5%;
+
+}
+
+/* Child Element */
+.header {
+    margin: 0 20px;
+}
+
+/* Setting style for the navigation bar that appears below the header */
+/* Container */
 nav {
     height: 25px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    padding-right: 11.5%;
+    padding-right: 14%;
     background-color: var(--light);
     text-transform: uppercase;
     font-weight: 700;
 }
 
+/* Child Element, Anchors to webpage sections*/
 nav a {
     font-size: 24px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: var(--white);
     margin-left: 15px;
     margin-right: 15px;
+    background-color: var(--light);
 
 }
 
-
+/* Flex Containers for three major parts of main webpage body */
 #about-me, #contact-me, #projects {
     display: flex;
     flex-wrap: wrap;
-    width: 85%;
+    width: 70%;
     margin: 0 auto;
     justify-content: center;
     position: relative;
 }
 
+
+
+/* Styling for any Child flexboxes through the main webpage body */
+/* Child Elements */
 .cards{
     flex: 1 0;
     margin: 10px;
-    /* border-radius: 25px; */
+    border-radius: 25px;
     border: 6px solid var(--light);
-    box-shadow: 8px 5px 10px var(--dark);
+    box-shadow: 8px 5px var(--dark);
     padding: 10px;
     background-color: var(--neutral-light);
     position: relative;
 }
+    
+/* Float Left styles the textbox portion of my #about-me */
+/* Child Element */
+#float-left {
+    flex: 4 0;
+}
+    
+/* Float Right Styles the image in the #about-me section */
+/* Child Element */
+#float-right {
+    flex: 1 0 250px;
+}
+    
+#float-right img {
+    display:block;
+    height:325px;
+    width: auto;
+    margin: 0 auto;
+}
+    
+/* Styling for featured project in #projects section */
+/* Child Element */
+#featured {
+    width: 100%;
+}
+    
+#featured img {
+    display: block;
+    margin: 0 auto;
+    min-height: 300px;
+    height: auto;
+    width: 80%;
+}
+    
+/* Styling for other projects in the #projects section of portfolio */
+    
+#showcase {
+    flex-basis: 45%;
+}
+    
+#showcase img {
+    display: block;
+    margin: auto;
+    height: auto;
+    width: 70%;
+}
+
+/* Interactivity for #projects .cards */
+
+#featured2:focus, #showcase:focus {
+    border-color: black;
+}
+
+#featured2:hover, #showcase:hover {
+    border-color: black;
+    background-color: var(--dark);
+    box-shadow: none;
+}
+
+#featured2:active, #showcase:active {
+    box-shadow: 0 0 10px #000 inset;
+}
+
+/* Namecards for all projects in #projects section of portfolio */
 
 .info-box {
     height: 60px;
@@ -113,74 +191,55 @@ nav a {
     padding-top: 10px;
 }
 
-#featured {
-    width: 100%;
-}
-
-
-#featured img {
-    display: block;
-    margin: 0 auto;
-    min-height: 300px;
-    height: auto;
-    width: 90%;
-    
-}
-
-#showcase {
-    flex-basis: 45%;
-}
-
-
-#showcase img {
-    display: block;
-    margin: auto;
-    height: auto;
-    width: 90%;
-}
-
-#float-left {
-    flex: 4 0;
-}
-
-#float-right {
-    flex: 1 0 250px;
-}
-
-#float-right img {
-    display:block;
-    height:225px;
-    width: 225px;
-    margin: 0 auto;
-}
-
+/* New parent flexbox element within #contact-me section of main */
 #contact-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content:  space-evenly;
 }
 
-.contact {
+/* Styling for the buttons in #contact-me */
+button {
     width: 250px;
     border: 5px solid var(--light);
     border-radius: 10px;
     background-color: var(--dark);
-    margin-left: 5px;
-    margin-right: 5px;
     margin-top: 10px;
 }
 
-.contact h3 {
+button h3 {
     text-decoration: underline;
     color: var(--white);
 
 }
 
-.contact p {
+button p {
     color: var(--white);
 }
 
+/* Interactive styling for Buttons */
 
+button:focus  {
+    border-color: black;
+}
+
+button:hover {
+    background-color: var(--neutral);
+    border-color: var(--special);
+}
+
+button:hover h3,
+button:hover p {
+    color: var(--special);
+}
+
+button:active {
+    box-shadow: 0 0 10px #48A9A6 inset;
+}
+
+
+
+/* Defines styling for the footer */
 footer {
     height: 25px;
     display: flex;
@@ -191,7 +250,10 @@ footer {
 }
 
 
+
+/* Defining styling changes when webpage is viewed on mobile devices */
 @media screen and (max-width: 768px) { 
+    /* Splits first and last name into two lines within header element and centers the text */
     header {
        flex-direction: column; 
        height: 90px;
@@ -200,6 +262,7 @@ footer {
        padding-bottom: 10px;
     }
 
+    /* Changes anchors in Nav to display in the center */
     nav {
         justify-content: center;
         padding-right: 0;
@@ -210,6 +273,8 @@ footer {
         font-size: 16px;
     }
 
+
+    /* Styles image in about me to display first on mobile webpage */
     #float-right {
         order: 0;
         flex: 1 0;
@@ -226,25 +291,34 @@ footer {
         order: 1;
     }
     
+
+    /* Redefines flex direction for the child elements in the main section of the webpage to view everything in a single column as you scroll down the page */
     #about-me, #projects, #contact-me {
       flex-direction: column;
       margin: 0 auto;
       width: 90%;
     }
-
-    .contact {
-        margin: 7px auto; 
-       }
-
+    
     .cards {
         width: 100%;
         display: flex;
     }
 
+    #contact-container {
+        justify-content: center;
+    }
 
+    button {
+        margin: 7px auto; 
+       }
+
+    /*Styles Showcase image to remain the largest on the page, even in mobile browser  */
     #showcase img {
         height: 150px;
-        width: 100%;
+        width: 80%;
     }
+
+
+
 
 }
