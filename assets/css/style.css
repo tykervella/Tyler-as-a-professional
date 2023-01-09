@@ -250,11 +250,11 @@ button p {
 /* Interactive styling for Buttons */
 
 button:focus  {
-    border-color: black;
+    border-color: var(--special);
 }
 
 button:hover {
-    background-color: var(--neutral);
+    background-color: var(--dark);
     border-color: var(--special);
 }
 
