@@ -174,8 +174,11 @@ nav a:active {
     
 #featured img {
     display: block;
-    margin: 0 auto;
-    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    min-height: 200px;
     height: auto;
     width: 80%;
 }
@@ -190,7 +193,7 @@ nav a:active {
     display: block;
     margin: auto;
     height: auto;
-    width: 70%;
+    width: 100%;
 }
 
 /* Interactivity for #projects .cards */
@@ -201,7 +204,7 @@ nav a:active {
 
 #featured2:hover, #showcase:hover {
     border-color: black;
-    background-color: var(--dark);
+    background-color: var(--special);
     box-shadow: none;
 }
 
@@ -213,12 +216,16 @@ nav a:active {
 
 .info-box {
     height: 80px;
-    width: 150px;
+    width: 250px;
     bottom: 20px;
     left: 0px;
     position: absolute;
     background-color: var(--light);
     padding-top: 10px;
+}
+
+.info-box h3 {
+    text-decoration: underline;
 }
 
 /* New parent flexbox element within #contact-me section of main */
@@ -254,14 +261,11 @@ button:focus  {
 }
 
 button:hover {
-    background-color: var(--dark);
+    background-color: var(--special);
     border-color: black;
 }
 
-button:hover h3,
-button:hover p {
-    color: var(--special);
-}
+
 
 button:active {
     box-shadow: 0 0 8px black inset;
@@ -344,8 +348,8 @@ footer {
 
     /*Styles Showcase image to remain the largest on the page, even in mobile browser  */
     #showcase img {
-        height: 150px;
-        width: 80%;
+        height: 250px;
+        width: 100%;
     }
 
 
