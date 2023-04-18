@@ -215,16 +215,29 @@ nav a:active {
 /* Namecards for all projects in #projects section of portfolio */
 
 .info-box {
-    height: 80px;
-    width: 250px;
+    height: 88px;
+    width: 420px;
     bottom: 20px;
     left: 0px;
     position: absolute;
     background-color: var(--light);
     padding-top: 10px;
+    color: whitesmoke;
+
 }
 
-.info-box h3 {
+.info-box2 {
+    height: 88px;
+    width: 700px;
+    bottom: 20px;
+    left: 0px;
+    position: absolute;
+    background-color: var(--light);
+    padding-top: 10px;
+    color: whitesmoke;
+}
+
+.info-box h3, .info-box2 h3 {
     text-decoration: underline;
 }
 
